@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import ButtonSvgNext from './ButtonSvgNext';
+import ButtonSvgPrev from './ButtonSvgPrev';
+import ButtonSvgPlay from './ButtonSvgPlay';
+import ProgressBar from './progressBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+interface Props {}
+
+const App = ({}: Props) => {
+    return (
+        <div className="player">
+            <div className="songs">
+                <ul>
+                    <li>
+                        asdad
+                    </li>
+                    <li>
+                        sadas
+                    </li>
+            </ul>
+            </div>
+            <div className="progress__container">
+                <div className="progressBar">
+                    <ProgressBar id="progress" />
+                </div>
+            </div>
+            <div className="buttonPrev">
+                <ButtonSvgPrev id="prev" />
+                <div />
+                <div className="Play">
+                    <ButtonSvgPlay id="play" />
+                </div>
+                <div className="Next">
+                    <ButtonSvgNext id="next" />
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;
